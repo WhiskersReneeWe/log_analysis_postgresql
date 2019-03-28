@@ -1,11 +1,11 @@
 # Log Analysis Project with PostgreSQL
 ## Project No.1 from Udacity's Fullstack Nanodegree
 
-## Python packages used
+## Python Packages
 * psycopg2
 * datetime
 
-## Files Description
+## File DescriptionS
 There are only two files in this repository,
 
 1. log_analysis.py (Source code for SQL queries and other related "dirty" work when interacting with the database)
@@ -50,7 +50,7 @@ the names of all the views to be created and their descriptions below.
   
 ## Acknowledgement
 
-I sincerely thank for the amazing Udacity community!
+I sincerely thank the amazing Udacity community for my adventure with Python and SQL!
 
 
 
