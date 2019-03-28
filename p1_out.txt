@@ -1,0 +1,124 @@
+Hi, this is my LOG ANALYSIS project!
+Thanks for reviewing it!
+
+
+
+
+Answers to Question 1:
+
+
+Top 1 article: candidate-is-jerk with 338647 viewed in total
+
+Top 2 article: bears-love-berries with 253801 viewed in total
+
+Top 3 article: bad-things-gone with 170098 viewed in total
+
+
+
+
+Answers to Question 2:
+
+
+['Ursula La Multa---512805 views.', 'Rudolf von Treppenwitz---427781 views.', 'Anonymous Contributor---171762 views.', 'Markoff Chaney---85387 views.']
+
+
+
+
+Answers to Question 3:
+
+
+Jul 17, 2016---2.3%
+
+
+Jul 19, 2016---0.8%
+
+
+Jul 24, 2016---0.8%
+
+
+Jul 05, 2016---0.8%
+
+
+Jul 06, 2016---0.8%
+
+
+Jul 21, 2016---0.8%
+
+
+Jul 08, 2016---0.8%
+
+
+Jul 09, 2016---0.7%
+
+
+Jul 15, 2016---0.7%
+
+
+Jul 22, 2016---0.7%
+
+
+Jul 11, 2016---0.7%
+
+
+Jul 03, 2016---0.7%
+
+
+Jul 30, 2016---0.7%
+
+
+Jul 26, 2016---0.7%
+
+
+Jul 28, 2016---0.7%
+
+
+Jul 25, 2016---0.7%
+
+
+Jul 02, 2016---0.7%
+
+
+Jul 14, 2016---0.7%
+
+
+Jul 13, 2016---0.7%
+
+
+Jul 20, 2016---0.7%
+
+
+Jul 29, 2016---0.7%
+
+
+Jul 04, 2016---0.7%
+
+
+Jul 16, 2016---0.7%
+
+
+Jul 18, 2016---0.7%
+
+
+Jul 23, 2016---0.7%
+
+
+Jul 12, 2016---0.7%
+
+
+Jul 10, 2016---0.7%
+
+
+Jul 27, 2016---0.7%
+
+
+Jul 07, 2016---0.7%
+
+
+Jul 31, 2016---0.7%
+
+
+Jul 01, 2016---0.7%
+
+
+
+Thank you again for your patience!
