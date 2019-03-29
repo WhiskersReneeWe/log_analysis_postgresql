@@ -20,18 +20,17 @@ def connect_db():
         print("Connected!")
         return db
 
-
-def answer_q1():
-
+def get_top3_articles():
+    ```fetch the top 3 most popular articles in the database```
+    
+    
     query1 = "select path, count(*) as total_views from log \
     group by path order by total_views DESC \
     limit 4;"
 
-    db = connect_db()
     cursor = db.cursor()
     cursor.execute(query1)
     top_arts = cursor.fetchall()
-    db.close()
     # formatting the result
     top_3 = top_arts[1:]
     for i in range(len(top_3)):
@@ -40,18 +39,18 @@ def answer_q1():
               .format((i+1), name, top_3[i][1]))
 
 
-def answer_q2():
+def get_top3_authors():
+     ```fetch the top 3 most popular authors in the database```
 
+        
     query2 = "select name, SUM(temp_tbl.num_viewed) as all_views \
     FROM temp_tbl \
     GROUP BY name \
     ORDER BY all_views DESC;"
-
-    db = connect_db()
+    
     cursor = db.cursor()
     cursor.execute(query2)
     popular_authors = cursor.fetchall()
-    db.close()
 
     # formatting the result
     authors_pop = []
@@ -64,18 +63,18 @@ def answer_q2():
     print(authors_pop)
 
 
-def answer_q3():
+def find_error_date():
+    ```Get the date that has Request error rate that is higher than 1%```
 
     query3 = "select time, error_rate from (select time, num_errors \
     / CAST(num_total AS float) as error_rate \
     from error_tbl) as error_rate_tbl \
     where error_rate > 0.01 \
     ORDER BY error_rate DESC;"
-    db = connect_db()
+    
     cursor = db.cursor()
     cursor.execute(query3)
     dates_errors = cursor.fetchall()
-    db.close()
 
     # formatting dates and time
 
@@ -85,13 +84,15 @@ def answer_q3():
         temp = day + "---" + err_pct
         print(temp + '\n')
 
-
-print('Answers to Question 1:' + '\n')
-answer_q1()
-print('\n')
-print('Answers to Question 2:' + '\n')
-answer_q2()
-print('\n')
-print('Answers to Question 3:' + '\n')
-answer_q3()
-print('Thank you again for your patience!')
+if __name__ == "__main__":
+    print('Top 3 popular articles:' + '\n')
+    db = connect_db()
+    answer_q1()
+    print('\n')
+    print('Top 3 popular authors:' + '\n')
+    answer_q2()
+    print('\n')
+    print('More than 1 percent request errors on this day:' + '\n')
+    answer_q3()
+    db.close()
+    print('Thank you again for your patience!')
