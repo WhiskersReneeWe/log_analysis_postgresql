@@ -5,7 +5,7 @@
 * psycopg2
 * datetime
 
-## File DescriptionS
+## File Descriptions
 There are only two files in this repository,
 
 1. log_analysis.py (Source code for SQL queries and other related "dirty" work when interacting with the database)
