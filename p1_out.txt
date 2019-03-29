@@ -1,0 +1,36 @@
+Hi, this is my LOG ANALYSIS project!
+Thanks for reviewing it!
+
+
+
+
+Answers to Question 1:
+
+
+Top 1 article: candidate-is-jerk with 338647 viewed in total
+
+Top 2 article: bears-love-berries with 253801 viewed in total
+
+Top 3 article: bad-things-gone with 170098 viewed in total
+
+
+
+
+Answers to Question 2:
+
+
+['Ursula La Multa---512805 views.', 'Rudolf von Treppenwitz---427781 views.', 'Anonymous Contributor---171762 views.', 'Markoff Chaney---85387 views.']
+
+
+
+
+Answers to Question 3:
+
+
+Jul 17, 2016---2.3%
+
+
+
+
+
+Thank you again for your patience!
