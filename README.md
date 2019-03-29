@@ -30,42 +30,42 @@ You can follow the steps listed below to get all 3 answers from this project in 
 You should be able to read through the log analysis when you open the your_output.txt file by <br/>
 following the above steps.
 
-## Important Note 
+## Views Statement and code
 
 The source code relies on a couple of views I created on the database when querying through the database. I will list <br/>
 the names of all the views to be created and their code below,
 
 1. log_art_match (a relation that joins log table and articles table)
 
- `view1 ="create view log_art_match as SELECT log.path, log.id, articles.slug, articles.author \
-            from log, articles \
+ `view1 ="create view log_art_match as SELECT log.path, log.id, articles.slug, articles.author 
+            from log, articles 
             WHERE log.path = '/article/' || articles.slug;"`
 
 2. author_views (a relation that shows the name of each author and the number of views of each article from this author)
 
-  `view2 = "create view author_views as \
-          select log_art_match.id, log_art_match.slug, authors.name FROM \
+  `view2 = "create view author_views as 
+          select log_art_match.id, log_art_match.slug, authors.name FROM 
           log_art_match JOIN authors ON log_art_match.author = authors.id;"`
 
 3. temp_tbl:
 
-  `view3 = "create view temp_tbl as \
-   select name, count(*) num_viewed from author_views \
-          GROUP BY name, slug \
-          ORDER BY num_viewed DESC;"`
+  `view3 = "create view temp_tbl as 
+            select name, count(*) num_viewed from author_views 
+            GROUP BY name, slug 
+            ORDER BY num_viewed DESC;"`
 
 4. date_error (a relation describes the number of Error Responses, i.e., the number of "404 NOT FOUND" on each day)
   
   
-  `view4 = "create view date_error as \
-	           SELECT time, COUNT(*) AS num_errors from (SELECT CAST(time AS DATE), status FROM log) as date_status \
-              WHERE status = '404 NOT FOUND' \
-              GROUP BY time;"`
+  `view4 = "create view date_error as 
+	    SELECT time, COUNT(*) AS num_errors from (SELECT CAST(time AS DATE), status FROM log) as date_status 
+            WHERE status = '404 NOT FOUND' 
+            GROUP BY time;"`
               
 5. date_status (a relation describes the total number of Ruquest status on each day)
 
-  `view5 = "create view date_status as \
-            SELECT time, COUNT(*) AS num_total from (SELECT CAST(time AS DATE), status FROM log) as date_status \
+  `view5 = "create view date_status as
+            SELECT time, COUNT(*) AS num_total from (SELECT CAST(time AS DATE), status FROM log) as date_status
             GROUP BY time;"`
 
 6. error_tbl:
@@ -73,8 +73,8 @@ the names of all the views to be created and their code below,
   * This is the final relation I used to query for Question 3
   
   
-  `view6 = "create view error_tbl AS SELECT date_error.time, date_error.num_errors, date_status.num_total \
-              FROM date_error join date_status \
+  `view6 = "create view error_tbl AS SELECT date_error.time, date_error.num_errors, date_status.num_total 
+              FROM date_error join date_status 
               on date_error.time = date_status.time;"`
   
 ## Acknowledgement
