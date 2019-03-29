@@ -20,7 +20,7 @@ You can follow the steps listed below to get all 3 answers from this project in 
 
 0. Download the database [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 1. Fire up a termnial (I used Git Bash)
-2. Change your working directory, if you haven't done so, to where the live database is running on your Virtual Machine
+2. Change your working directory, if you haven't done so, to where the database files are
 3. Unzip the file you downloaded from step 0 into the current working directory
 4. run `psql -d news -f newsdata.sql` in your command line
 5. Once everything looks good, then run `python log_analysis.py > your_output.txt`
