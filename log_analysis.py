@@ -21,7 +21,7 @@ def connect_db():
         return db
 
 def get_top3_articles():
-    ```fetch the top 3 most popular articles in the database```
+    """fetch the top 3 most popular articles in the database"""
     
     
     query1 = "select path, count(*) as total_views from log \
@@ -40,7 +40,7 @@ def get_top3_articles():
 
 
 def get_top3_authors():
-     ```fetch the top 3 most popular authors in the database```
+     """fetch the top 3 most popular authors in the database"""
 
         
     query2 = "select name, SUM(temp_tbl.num_viewed) as all_views \
@@ -64,7 +64,7 @@ def get_top3_authors():
 
 
 def find_error_date():
-    ```Get the date that has Request error rate that is higher than 1%```
+    """Get the date that has Request error rate that is higher than 1%"""
 
     query3 = "select time, error_rate from (select time, num_errors \
     / CAST(num_total AS float) as error_rate \
