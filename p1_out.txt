@@ -26,7 +26,7 @@ Top 3 popular authors:
 
 
 
-More than 1 percent errors this day:
+More than 1 percent request errors on this day:
 
 
 Jul 17, 2016---2.3%
