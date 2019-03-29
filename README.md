@@ -37,15 +37,15 @@ the names of all the views to be created and their code below,
 
 1. log_art_match (a relation that joins log table and articles table)
 
- `view1 ="create view log_art_match as SELECT log.path, log.id, articles.slug, articles.author 
+ `view1 = "create view log_art_match as SELECT log.path, log.id, articles.slug, articles.author 
             from log, articles 
             WHERE log.path = '/article/' || articles.slug;"`
 
 2. author_views (a relation that shows the name of each author and the number of views of each article from this author)
 
   `view2 = "create view author_views as 
-          select log_art_match.id, log_art_match.slug, authors.name FROM 
-          log_art_match JOIN authors ON log_art_match.author = authors.id;"`
+            select log_art_match.id, log_art_match.slug, authors.name FROM 
+            log_art_match JOIN authors ON log_art_match.author = authors.id;"`
 
 3. temp_tbl:
 
@@ -74,8 +74,8 @@ the names of all the views to be created and their code below,
   
   
   `view6 = "create view error_tbl AS SELECT date_error.time, date_error.num_errors, date_status.num_total 
-              FROM date_error join date_status 
-              on date_error.time = date_status.time;"`
+            FROM date_error join date_status 
+            on date_error.time = date_status.time;"`
   
 ## Acknowledgement
 
